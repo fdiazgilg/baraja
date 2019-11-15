@@ -5,23 +5,23 @@ class Baraja:
         self.numero = ('A','2','3','4','5','6','7','S','C','R')
     
     def crearBaraja(self):
-        baraja = []
-        for key in self.palo:
-            for item in self.numero:
-                baraja.append(item+key)
+        barajaNew = []
+        for palo in self.palo:
+            for num in self.numero:
+                barajaNew.append(num+palo)
         
-        return baraja
+        return barajaNew
 
     def mezclar(self):
         import random
-        baraja = self.crearBaraja()
-        for i in range(len(baraja)):
-            cartaOut = random.choice(baraja)
-            indiceOut = baraja.index(cartaOut)
-            cartaIn = baraja.pop(indiceOut)
-            baraja.insert(i,cartaIn)
+        mezclada = self.crearBaraja()
+        for i in range(len(mezclada)):
+            cartaOut = random.choice(mezclada)
+            indiceOut = mezclada.index(cartaOut)
+            cartaIn = mezclada.pop(indiceOut)
+            mezclada.insert(i,cartaIn)
 
-        return baraja
+        return mezclada
     
     def repartir(self,mano,jugadores):
         baraja = self.mezclar()
@@ -36,3 +36,5 @@ class Baraja:
         
         except:
             print("\nLo siento, pero no tenemos cartas para todos los jugadores.")
+        
+        return baraja
