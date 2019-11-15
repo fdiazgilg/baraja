@@ -35,12 +35,12 @@ class Baraja:
                 print("Las cartas del jugador {} son {}.".format(i+1,partida[i]))
         
         except:
-            print("No tenemos tantas cartas para repartir.")
+            print("\nNo tenemos tantas cartas para repartir.")
             
 if __name__ == '__main__':
     
     barajaNueva = Baraja()
     print("Hemos creado una baraja de cartas española:\n",barajaNueva.crearBaraja())
     print("\nHemos mezclado una baraja de cartas española:\n",barajaNueva.mezclar(),"\n")
-    barajaNueva.repartir(7,4)
+    barajaNueva.repartir(20,6)
 
