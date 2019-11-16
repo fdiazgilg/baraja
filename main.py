@@ -48,7 +48,7 @@ if __name__ == '__main__':
     print("Las cartas ordenadas de la baraja española:\n",format(baraja))
     barajada = juego.mezclar()
     print("\nLas cartas mezcladas de la baraja española:\n",format(barajada),"\n")
-    restoBaraja = juego.repartir(5,5)
+    restoBaraja = juego.repartir(4,5)
     if not juego.sinCartas:
         print("\nLas cartas sobrantes después de iniciar la partida:\n",format(restoBaraja))
         restoMezc = juego.mezclar()
